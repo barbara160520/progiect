@@ -1,2 +1,2 @@
-# progiect
+# progject
 veb-page-proofs

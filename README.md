@@ -1,2 +1,2 @@
-# progject
+# project
 veb-page-proofs

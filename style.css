@@ -12,6 +12,7 @@ body {
 
 .container {
     display: flex;
+    width: 1140px;
     flex-wrap: wrap;
     padding-left: 230px;
     padding-right: 230px;
@@ -408,7 +409,7 @@ button.bnt4 img {
 
 .product {
     min-height: 982px;
-    width: 1141px;
+    width: 1140px;
 }
 
 .product .hear-text1 {

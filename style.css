@@ -753,7 +753,8 @@ a.button:active {
     flex-wrap: wrap;
     width: 386px;
     height: 122px;
-    margin: 148px 0 0 92px;
+    margin: 148px 0 0 60px;
+    /*148px 0 0 92px*/
 }
 
 .slider3-head {
@@ -804,7 +805,7 @@ form2 {
 
 button.bnt_d2 {
     position: absolute;
-    top: -13px;
+    top: -13px; /*-8.5*/
     right: -103px;
     width: 104px;
     height: 47px;
@@ -891,6 +892,7 @@ button.bnt_d2 {
 }
 
 .footer {
+    width: 1140px;
     height: 79px;
     background-color: #e6e6e6;
 }

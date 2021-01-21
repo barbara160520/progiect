@@ -11,7 +11,8 @@ body {
 }
 
 .container {
-    display: flex;
+    margin: 0;
+    width: 1140px;
     flex-wrap: wrap;
     padding-left: 230px;
     padding-right: 230px;
@@ -22,10 +23,11 @@ body {
 }
 
 .haeder {
-    width: 1144px;
-    height: 51px;
+    display: flex;
+    min-height: 51px;
     float: left;
     padding-top: 25px;
+    width: 100%;
 }
 
 .header-left {
@@ -62,15 +64,13 @@ a.logo img {
     padding-right: 13px;
 }
 
-
-form {
+form1 {
     position: relative;
     width: 300px;
     left: 89px;
 }
 
 .d1 {
-    background: #f2f2f2;
     width: 403px;
     height: 39px;
     float: left;
@@ -109,7 +109,7 @@ button.bnt1 img {
 
 button.bnt2 {
     position: absolute;
-    top: 0;
+    top: -8px;
     right: -15px;
     width: 37px;
     height: 42px;
@@ -119,11 +119,9 @@ button.bnt2 {
     cursor: pointer;
     outline: none;
 }
-
-button.bnt1 {
+ button.bnt1 {
     position: absolute;
-    top: 0;
-    right: 300px;
+    right: 400px;
     width: 89px;
     height: 42px;
     border: none;
@@ -150,9 +148,7 @@ button:hover {
 .header-right {
     width: 198px;
     height: 38px;
-    float: left;
-    position: relative;
-    left: 349px;
+    margin-left: 349px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +186,7 @@ button.bnt4 img {
 .header-menu {
     margin-top: 22px;
     padding:10px 0 10px 0;
-    width: 1140px;
+    width: 100%;
     display: inline-flex;
     justify-content: center;
 }
@@ -211,7 +207,7 @@ button.bnt4 img {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 19px 22px;
+    padding: 11px 22px;
     letter-spacing: 1.4px;
     line-height: 26px;
 }
@@ -219,14 +215,13 @@ button.bnt4 img {
 .menu-link:hover {
     color: #e8e8e8;
     font-weight: 700;
+    border-bottom: 4px solid #f16d7f;
 }
 
 .slider {
+    display: flex;
     background-color: #e8e8e8;
-    margin: 0;
     min-height: 665px;
-    position: relative;
-    margin-top: 10px;
 }
 
 .slider-fon {
@@ -275,8 +270,8 @@ button.bnt4 img {
 .promotions {
     padding-top: 50px;
     padding-bottom: 96px;
-    height: 832px;
-    width: 1141px;
+    min-height: 832px;
+    display: flex;
     float: left;
 }
 
@@ -405,10 +400,11 @@ button.bnt4 img {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
-
+/*список товаров*/
 .product {
     min-height: 982px;
-    width: 1141px;
+    display: flex;
+    margin-bottom: 113px;
 }
 
 .product .hear-text1 {
@@ -432,11 +428,6 @@ button.bnt4 img {
     text-align: center;
     letter-spacing: 0.35px;
     margin-top: -16px;
-}
-
-/*список товаров*/
-.product {
-    margin-bottom: 113px;
 }
 
 .product .product-menu {
@@ -511,7 +502,6 @@ ul {
 
 .add-box:active,
 .add-box:hover {
-    border: 1px solid #f16d7f;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.50);
 }
@@ -534,7 +524,7 @@ ul {
     height: 48px;
     background-color: #f16d7f;
     margin-left: 464px;
-    margin-top: 56px;
+    margin-top: 49px;
 }
 
 .bnt-product a.button {
@@ -571,6 +561,7 @@ a.button:active {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 97px;
 }
 
 .slider2-fon {
@@ -659,11 +650,10 @@ a.button:active {
     letter-spacing: 0.35px;
     font-family: 'Lato';
 }
-
-.slider3-sub {
-    height: 438px;
-    margin-top: 97px;
-    background-image: url(img/slider3_fon.jpg);
+/*down*/
+.slider-down-box {
+display: flex;
+    background-image: url(img/slider3_fon.jpg)
 }
 
 .slider3-left {
@@ -753,7 +743,7 @@ a.button:active {
     flex-wrap: wrap;
     width: 386px;
     height: 122px;
-    margin: 148px 0 0 60px;
+    margin: 148px 0 0 92px;
     /*148px 0 0 92px*/
 }
 
@@ -830,13 +820,14 @@ button.bnt_d2 {
    color: #f16d7f; 
 }
 .slider4-info {
-    height: 458px;
+    display: flex;
+    padding-top: 109px;
+    min-height: 260px;
+    padding-bottom: 89px;
 }
 
 .slider4-box {
-    margin-top: 109px;
     width: 1099px;
-    height: 260px;
     display: flex;
     justify-content: space-between;
 
@@ -892,13 +883,13 @@ button.bnt_d2 {
 }
 
 .footer {
-    width: 1140px;
-    height: 79px;
+    min-height: 79px;
     background-color: #e6e6e6;
+    display: flex;
 }
 
 .footer-text {
-    margin-top: 33px;
+    padding-top: 23px;
     margin-right: 600px;
     width: 260px;
     color: #7a7a7a;

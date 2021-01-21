@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="style.css">
-    <!--<script src="java.js"></script>-->
+    <script type="text/javascript" src="modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
@@ -23,12 +23,12 @@
                 </a>
             </div>
             <div class="d1">
-                <form>
+                <form1>
                     <button class="bnt1" type="submit" class="bnt1">Browes<img src="img/arrow1.png" alt="browse">
                     </button>
                     <input type="text" placeholder="Search for Item...">
                     <button class="bnt2" type="submit"><a href="#"><img src="img/search.png" alt="поиск"></a></button>
-                </form>
+                </form1>
             </div>
             <div class="header-right">
                 <a class="bnt3"><img src="img/корзина.png" alt="поиск"></a>
@@ -58,17 +58,95 @@
             </div>
         </div>
     </div>
-    <div class="galler-prod container">
+   <div class="galler-prod container">
         <div class="categorys">
-            <div class="wrapper-dropdown" id="dd">
-                <span>Category</span>
-                <ul class="dropdown">
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Bags</a></li>
-                    <li><a href="#">Denim</a></li>
-                </ul>
+            <div class="wrapper-demo">
+                <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+                    <span>Category</span>
+                    <ul class="dropdown" tabindex="1">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Denim</a></li>
+                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Polos</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Shorts</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#">Sweaters & Knits</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Tanks</a></li>
+                    </ul>
+                </div>
             </div>
-            
+            <div class="wrapper-demo" >
+                <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+                    <span>BRAND</span>
+                    <ul class="dropdown" tabindex="1">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Denim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper-demo">
+                <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+                    <span>DESIGNER</span>
+                    <ul class="dropdown" tabindex="1">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Denim</a></li>
+                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+            <script type="text/javascript">
+                function DropDown(el) {
+                    this.dd = el;
+                    this.placeholder = this.dd.children('span');
+                    this.opts = this.dd.find('ul.dropdown > li');
+                    this.val = '';
+                    this.index = -1;
+                    this.initEvents();
+                }
+                DropDown.prototype = {
+                    initEvents: function() {
+                        var obj = this;
+
+                        obj.dd.on('click', function(event) {
+                            $(this).toggleClass('active');
+                            return false;
+                        });
+
+                        obj.opts.on('click', function() {
+                            var opt = $(this);
+                            obj.val = opt.text();
+                            obj.index = opt.index();
+                            obj.placeholder.text( obj.val);
+                        });
+                    },
+                    getValue: function() {
+                        return this.val;
+                    },
+                    getIndex: function() {
+                        return this.index;
+                    }
+                }
+
+                $(function() {
+
+                    var dd = new DropDown($('#dd'));
+
+                    $(document).click(function() {
+                        // all dropdowns
+                        $('.wrapper-dropdown-1').removeClass('active');  
+                    });
+
+                });
+            </script>
         </div>
 
         <div class="product-arr">
@@ -98,8 +176,11 @@
                         <lable><input type="checkbox">XXL</lable>
                     </p>
                 </div>
-                <div class="top-f3">PRICE <p id="tf1"><lable></lable><input id="range" type="range" value="10" step="0.1"></p>
-                <p><output name="result" for="range"></output></p></div>
+                <div class="top-f3">PRICE
+                    <form class="form-prise" onsubmit="return false" oninput="result.value = flevel.valueAsNumber"><input name="flevel" id="range" type="range" min="10" max="1000" value="10" step="1">
+                        $<output name="result" for="range">10</output>
+                    </form>
+                </div>
             </div>
             <div class="filter">
                 <form3 class="filter-form1">Sort By<button class="bnt1-filter">Name<i class="fas fa-sort-down"></i></button></form3>

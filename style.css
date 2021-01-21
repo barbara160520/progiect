@@ -64,15 +64,13 @@ a.logo img {
     padding-right: 13px;
 }
 
-/*добавить название form*/
-form {
+form1 {
     position: relative;
     width: 300px;
     left: 89px;
 }
 
 .d1 {
-    background: #f2f2f2;
     width: 403px;
     height: 39px;
     float: left;
@@ -111,7 +109,7 @@ button.bnt1 img {
 
 button.bnt2 {
     position: absolute;
-    top: 0;
+    top: -8px;
     right: -15px;
     width: 37px;
     height: 42px;
@@ -121,11 +119,9 @@ button.bnt2 {
     cursor: pointer;
     outline: none;
 }
-
-button.bnt1 {
+ button.bnt1 {
     position: absolute;
-    top: 0;
-    right: 300px;
+    right: 400px;
     width: 89px;
     height: 42px;
     border: none;
